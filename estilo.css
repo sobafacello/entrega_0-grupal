@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500&display=swap');
+
+/* sistema de grillas _________________________________*/
+* {box-sizing: border-box;}
+.row::after {content: ""; clear: both; display: table;}
+[class*="col-"] {float: left;}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* Barra de navergacion __________________________________________________________________*/
+
+body{
+  cursor: default; 
+}
+
+.topnav {
+  background-color: #e47312;
+  overflow: hidden;
+  z-index:1;
+  font-family: 'Bebas Neue', monospace, cursive, white;
+  width: 100%;
+  position: fixed;
+  margin: 0%;
+  padding: 0%;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  color: black;
+}
+
+.#menu a.active {
+  background-color: #800080;
+  color: white;
+  font-weight: bold;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/*Media queries _________________________________________________________________________*/
+@media screen and (max-width: 800px) {
+
+/* Media queries barra de navegación _____________________________________________________*/
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.full-height {
+  height: 100%;
+  padding: 10%;
+}
+
+/*For mobile phones ______________________________________________________________________*/
+@media only screen and (max-width: 768px) {
+  [class*="col-12"] {
+    width: 100%;
+    flex: 100%;
+    padding-top: 10%;
+  }
+
+  [class*="col-3"] {
+    width: 50%;
+    flex: 100%;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
+/* Todas las paginas_______________________________________________________________________*/
+.pag{
+  margin: 0px;
+  padding: 0px;
+  background-color: #94aa2a;
+}
+
+.pag1{
+  margin: 0px;
+  padding: 0px;
+  background-color: #e5d8bf;
+}
+
+.pag2{
+  margin: 0px;
+  padding: 0px;
+  background-color: #d55252;
+}
+
+div{
+  padding-right: 3%;
+  padding-left: 3%;
+  padding-top: 5%;
+}
+
+.container{
+  padding-bottom: 0%;
+  padding-right: 0%;
+  padding-left: 0%;
+  padding-top: 0%; 
+}
+
+.row{
+  padding-bottom: 0%;
+  padding-right: 0%;
+  padding-left: 0%;
+  padding-top: 0%;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  width: auto;
+
+}
+
+ h2 , h3{
+  font-family: 'Poppins';
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+p{
+  font-family: 'Poppins';
+  font-size: 20px;
+  color: white;
+}
+
+/* Index ________________________________________________________________________________*/
+
+h1{
+  text-align: center;
+
+  font-size: 90px;
+  font-family: 'Bebas Neue';
+  color: white;
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+  color: #d55252;
+  font-family: 'Bebas Neue' , bold;
+  font-size: 60px;
+  object-position: center;
+}
+
+button{
+  background: white;
+  border-radius: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+}
+
+button a:hover {
+  color: #94aa2a;
+
+}
+
+/* Contenedores _______________________________________________________________________*/
+
+.shake-horizontal:hover {
+ -webkit-animation: shake-horizontal 5s linear;
+  animation: shake-horizontal 5s linear;
+}
+
+@-webkit-keyframes shake-horizontal {
+  0%,100%{
+    -webkit-transform:translateX(0);
+    transform:translateX(0)}
+  10%,30%,50%,70%{
+    -webkit-transform:translateX(-10px);
+    transform:translateX(-10px)}
+  20%,40%,60%{
+    -webkit-transform:translateX(10px);
+    transform:translateX(10px)}
+  80%{
+    -webkit-transform:translateX(8px);
+    transform:translateX(8px)}
+  90%{
+    -webkit-transform:translateX(-8px);
+    transform:translateX(-8px)}
+  }
+
+@keyframes shake-horizontal {
+  0%,100%{
+    -webkit-transform:translateX(0);
+    transform:translateX(0)}
+  10%,30%,50%,70%{
+    -webkit-transform:translateX(-30px);
+    transform:translateX(-30px)}
+  20%,40%,60%{
+    -webkit-transform:translateX(30px);
+    transform:translateX(30px)}
+  80%{
+    -webkit-transform:translateX(28px);
+    transform:translateX(28px)}
+  90%{
+    -webkit-transform:translateX(-28px);
+    transform:translateX(-28px)}
+  }
+
+  .shake-vertical:hover {
+  -webkit-animation: shake-vertical 5s linear;
+  animation: shake-vertical 5s linear;
+}
+
+@keyframes shake-vertical {
+  0%,100%{
+    -webkit-transform:translateY(0);
+    transform:translateY(0)}
+  10%,30%,50%,70%{
+    -webkit-transform:translateY(-30px);
+    transform:translateY(-30px)}
+  20%,40%,60%{
+    -webkit-transform:translateY(30px);
+    transform:translateY(30px)}
+  80%{
+    -webkit-transform:translateY(28px);
+    transform:translateY(28px)}
+  90%{
+    -webkit-transform:translateY(-28px);
+    transform:translateY(-28px)}
+  }
+
+@keyframes shake-vertical {
+  0%,100%{
+    -webkit-transform:translateY(0);
+    transform:translateY(0)}
+  10%,30%,50%,70%{
+    -webkit-transform:translateY(-30px);
+    transform:translateY(-30px)}
+  20%,40%,60%{
+    -webkit-transform:translateY(30px);
+    transform:translateY(30px)}
+  80%{
+    -webkit-transform:translateY(28px);
+    transform:translateY(28px)}
+  90%{
+    -webkit-transform:translateY(-28px);
+    transform:translateY(-28px)}
+  }
+
+/* Video _______________________________________________________________________*/
+
+#video{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  animation-play-state: paused;
+  position: relative;
+  padding-top: 56.25%;
+}
+
+iframe{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
